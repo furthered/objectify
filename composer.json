@@ -1,6 +1,6 @@
 {
     "name": "furthered/objectify",
-    "description": "Recursively wraps an object in Illuminate\Support\(Collection|Fluent) objects.",
+    "description": "Recursively wraps an object in Illuminate\\Support\\(Collection|Fluent) objects.",
     "authors": [
         {
             "name": "Joe Tannenbaum",
