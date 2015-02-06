@@ -1,6 +1,6 @@
 {
-    "name": "app-store/result",
-    "description": "Recursively wraps results in Illuminate\\Support objects.",
+    "name": "furthered/objectify",
+    "description": "Recursively wraps an object in Illuminate\Support\(Collection|Fluent) objects.",
     "authors": [
         {
             "name": "Joe Tannenbaum",
