@@ -51,6 +51,16 @@ class ObjectifyTest extends PHPUnit_Framework_TestCase {
     }
 
     /** @test */
+    public function it_treats_an_empty_array_as_a_collection()
+    {
+        $data = [];
+
+        $converted = (new Objectify())->make($data);
+
+        $this->assertInstanceOf('Illuminate\Support\Collection', $converted);
+    }
+
+    /** @test */
     public function it_can_create_a_mixed_collection()
     {
         $data = [

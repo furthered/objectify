@@ -56,6 +56,11 @@ class Objectify {
         $keys      = array_keys($var);
         $first_key = reset($keys);
 
+        // Empty array, treat it as non-associative
+        if ($first_key === false) {
+            return false;
+        }
+
         return !($first_key === 0);
     }
 
