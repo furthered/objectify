@@ -31,7 +31,7 @@ class Objectify {
 
     public function convertToFluent($var)
     {
-        $var = new Fluent($var);
+        $var = new ObjectifyFluent($var);
 
         foreach ($var->getAttributes() as $key => $value) {
             $var->{$key} = $this->convert($value);
@@ -42,7 +42,7 @@ class Objectify {
 
     public function convertToCollection($var)
     {
-        $var = Collection::make($var);
+        $var = ObjectifyCollection::make($var);
 
         foreach ($var as $key => $value) {
             $var[$key] = $this->convert($value);

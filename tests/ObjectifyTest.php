@@ -110,4 +110,30 @@ class ObjectifyTest extends PHPUnit_Framework_TestCase {
         $this->assertInstanceOf('Illuminate\Support\Collection', $first->fifth);
     }
 
+    /** @test */
+    public function it_can_do_a_deep_array_conversion()
+    {
+        $data = [
+            [
+                'test'  => 'one',
+                'other' => 'two',
+                'third' => 'three',
+                'fourth' => [
+                    'an' => 'associative array'
+                ],
+                'fifth' => [
+                    'oh hey',
+                    'this too',
+                    'what',
+                ],
+            ],
+        ];
+
+        $converted = (new Objectify())->make($data);
+
+        $arr = $converted->toArray();
+
+        $this->assertSame($arr, $data);
+    }
+
 }
