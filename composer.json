@@ -3,19 +3,16 @@
     "description": "Recursively wraps an object in Illuminate\\Support\\(Collection|Fluent) objects.",
     "authors": [
         {
-            "name": "Joe Tannenbaum",
+            "name": "Lawline Dev",
             "role": "Author"
         }
     ],
     "require": {
-        "illuminate/support": "~8.0"
+        "illuminate/support": "~9.0"
     },
     "autoload": {
         "psr-4": {
             "Objectify\\": "src/"
         }
-    },
-    "require-dev": {
-        "phpunit/phpunit": "~4.4"
     }
 }
